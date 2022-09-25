@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>视频案例</title>
+        <style>
+            .waik{
+                position: relative;
+                width: 100%;
+                height: 900px;
+            }
+            .neik{
+                position: absolute;
+                bottom: 200px;
+                right: 300px;
+            }
+            .shi{
+                position: absolute;
+                bottom: 200px;
+                right: 300px;
+            }
+        </style>
+	</head>
+	<body>
+
+    <div class="waik">
+        <div class="neik">
+		<video class="shi" hidden="ture" width="600px" height="530px" autoplay loop="loop">
+			<source src="./MP3/掣电树.mp4" type="video/mp4"></source>
+		</video>	
+		<button id="ponse"><img src="./img/12+.png" alt=""></button>
+		<script type="text/javascript">
+			var ponse = document.getElementById("ponse");
+			var video1 = document.getElementsByTagName("video")[0];
+			ponse.onclick = function () {
+				if (video1.paused) {
+                    document.getElementsByTagName("video")[0].removeAttribute("hidden");
+					video1.play();
+				} else{
+					video1.pause();
+				}
+			}
+		</script>
+        </div>
+    </div>
+
+
+     <!-- <div class="waik">
+        <div class="neik">
+		<audio class="shi" width="600px" height="530px" autoplay  loop="loop">
+			<source src="./MP3/原神孟德.mp3" type="video/mp4"></source>
+        </audio>	
+		<button id="ponse"><img src="./img/12+.png" alt=""></button>
+		<script type="text/javascript">
+			var ponse = document.getElementById("ponse");
+			var video1 = document.getElementsByTagName("video")[0];
+			ponse.onclick = function () {
+				if (video1.paused) {
+					video1.play();
+				} else{
+					video1.pause();
+				}
+			}
+		</script>
+        </div>
+    </div> -->
+
+	</body>
+</html>
+

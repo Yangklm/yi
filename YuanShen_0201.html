@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页“千朵玫瑰”</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+
+    <style>
+        body{
+            overflow-x: hidden;
+        } 
+
+        #Shou{
+            width: 1967px;
+            height: 920px;
+        }
+        .fist_photo{
+            position: absolute;
+        }
+        .yuan{
+            position: relative;
+            left: 50px;
+            top: 46px;
+        }
+        .add12{
+            position: relative;
+            bottom: -600px;
+            left: 60px;
+        }
+        .download01,.download02{
+            position: relative;
+            bottom: -410px;
+            left: 830px;
+            z-index: 99;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+     <!-- 弹窗Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">《原神》适龄提示</h4>
+        </div>
+        <div class="modal-body">
+          <p><pre>
+    1、本游戏是一款开放世界玩法的冒险类游戏，适用于年满12周岁及以上的用户，
+    建议未成年人在监护人的监护下使用游戏产品。
+
+    2、本游戏设置了主线、支线剧情，通过对话、交互推动剧情，游戏还提供了开放
+    世界探索玩法。游戏内提供了少量基于文字的陌生人社交系统，
+    该社交系统遵循相关法律法规进行管理。
+
+    3、本游戏中有用户实名认证系统，认证为未成年的用户将受到以下游戏限制：
+    未满8周岁的用户不能充值；8周岁以上未满16周岁的未成年用户，单次充值金额
+    不得超过50元人民币，每月充值金额累计不得超过200元人民币；16周岁以上的未
+    成年用户，单次充值金额不得超过100元人民币，每月充值金额累计不得超过400
+    元人民币。游戏仅会在周五、周六、周日和法定节假日的20时至21时，向未成年
+    人提供1小时游戏服务。
+
+    4、游戏基于架空世界展开剧情，采用风格鲜明的美术设计、精美的游戏画面以及
+    优质的游戏配乐。
+
+            </pre></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">知道了</button>
+        </div>
+      </div>
+    </div> 
+      </div>
+<!-- </div> -->
+      <!--bootstrap 配置文件 -->
+      <script src="./js/jquery-2.2.4.js"></script>
+      <script src="./js/bootstrap.js"></script>
+  
+        <!-- 首页“千朵玫瑰”图片 -->
+        <div class="fist_photo">
+            <img id="Shou" src="./img/首页.jpg" alt="加载失败" >
+        </div>
+        <div class="yuan">
+            <a target="_blank" href="https://ys.mihoyo.com/main/"><img src="./img/原神.png" alt=""></a>
+        </div>
+        <div class="add12">
+            <a href="#" data-toggle="modal" data-target="#myModal"><img src="./img/12+.png" alt="加载失败"></a>
+        </div>
+        <div class="download01">
+            <a onclick="return deleteInfo()" href="./原神安装包.zip"><img src="./img/PC端下载.png" alt=""></a>
+        </div>
+        <div class="download02">
+            <a onclick="return deleteInfo()" href=""><img src="./img/云.原神下载.png" alt=""></a>
+        </div>
+        <!-- 确定下载弹窗 -->
+        <script>
+            function deleteInfo() {
+                const r = confirm("确定下载原神安装包");
+                if (r === true) {
+                    return true;
+                }
+                return false;
+            }
+        </script>
+</body>
+</html>

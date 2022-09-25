@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>角色情报</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+         #five{
+            width: 1967px;
+            height: 900px;
+        }
+        .fifth_photo{
+            position: absolute;
+        }
+        .yuanshen{
+            position: relative;
+            float: right;
+        }
+        .carousel-inner{
+            width: 1080px;
+            height: 700px;
+            position: relative;
+            bottom: -60px;
+            left: 390px;
+        }
+        .nei{
+            position: relative;
+            left: 260px;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="fifth_outside_div" style="height:930px; margin: 0px;">
+        <div class="fifth_photo">
+            <img id="five" src="./img/背景 (3) - 副本.png" alt="">
+        </div>
+        <div class="yuanshen" ><img src="./img/角色情报.png" alt=""></div>
+
+
+
+
+
+
+
+
+        <div class="rolling">
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" >
+                    <div class="item active">
+                        <img src="./img/钟离 (2).png" alt="...">
+                        <a href="#"><img src="./img/钟离min.png" alt=""></a>
+                    </div>
+    
+                    <div class="item">
+                        <img src="./img/多莉 (2).png" alt="...">
+                    </div>
+    
+                    <div class="item">
+                        <img src="./img/珊瑚宫心海.png" alt="...">
+                    </div>
+    
+                    <div class="item">
+                        <img src="./img/柯莱 (2).png" alt="...">
+                    </div>
+    
+                    <div class="item">
+                        <img src="./img/甘雨.png" alt="...">
+                    </div>
+
+    
+                </div>
+            </div>
+    
+            <div class="Aleft">
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"
+                    >
+    
+                    <img src="./img/绿箭头短 (2).png" alt="">
+                </a>
+            </div>
+            <div class="Aright">
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"
+                  >
+    
+                    <img src="./img/绿箭头短 (1).png" alt="">
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <script src="./js/jquery-2.2.4.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+
+
+
+
+    <!-- 模态框底部弹出效果 -->
+    <!--点击显示模态框按钮-->
+<!-- <input type="submit" id="btnshow" value="导航栏" style="position: fixed; bottom: 33px;"> -->
+ <a href="#" id="btnshow" style="position: fixed; bottom: 33px; "><img src="./img/更多展示页白.png" alt=""></a>
+ <!--模态框内容模块-->
+ <div id="showModal" style="height:600px;width: 100%; position: fixed; left: 0; bottom: 0;display: none; background-color: #fff; z-index: 200;">
+    <div class="nei">
+        <a href="./YuanShen_0202.html"><img src="./img/全新大世界区域 (4).png" alt=""></a>
+        <a href="./YuanShen_0203.html"><img src="./img/全新机制.png" alt=""></a>
+        <a href="./YuanShen_0204.html"><img src="./img/更多版本活动.png" alt=""></a>
+        <a href="./YuanShen_0201.html" target="_blank"><img src="./img/原神.png" alt=""></a>
+        <a href="./YuanShen_0206.html"><img src="./img/角色情报.png" alt=""></a>
+        <a><img src="./img/全新怪物.png" alt=""></a>
+        <a href="./YuanShen_0205.html"><img src="./img/游戏特色.webp" alt=""></a>
+</div>      
+ </div>
+  
+ <!--遮罩层-->
+ <div id="modalOuter" style="opacity: 0.5; position: fixed;top: 0; left: 0;width: 100vw; height: 100vh; z-index: 100; background-color: #000; display: none;"></div>
+  
+ </body>
+  
+  
+ <!--引入你本地的juqery.js文件-->
+ <!-- <script src="./js/jquery-2.2.4.js"></script> -->
+ <script>
+  
+     //弹出底部模态框
+     $("#btnshow").click(function () {
+         $("#showModal").animate({
+             height: "show",
+         }, 700 );
+         $("#modalOuter").show();
+     });
+  
+     //隐藏底部模态框
+     $("#modalOuter").click(function () {
+         $("#showModal").animate({
+             height: "hide",
+         }, 700 );
+         $(this).hide();
+     });
+  
+ </script>
+
+
+
+
+
+</body>
+</html>

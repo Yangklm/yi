@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更多版本活动</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+    <style>
+        body{
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }  
+        #four{
+            width: 1967px;
+            height: 900px;
+        }
+        .fourth_photo{
+           position:relative;
+        }
+        .morelGM{
+           position: absolute;
+           top: 30px;
+           left: 90px;
+        }
+
+        #accordion{
+            position: absolute;
+            top: 90px;
+            left: 500px;
+        }
+        .one{
+            width: 600px;
+            height: 50px;
+        }
+        .nei{
+            position: relative;
+            left: 260px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 第四个界面 -->
+    <div class="fourth_outside_div">
+        <div class="fourth_photo active">
+            <img id="four" src="./img/背景 (7).png" alt="">
+        </div>
+       <div class="morelGM" ><img src="./img/更多版本活动.png" alt=""></div>
+
+
+
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+<!-- 这是白框框 -->
+<!-- <div class="panel panel-default"> -->
+
+    <!-- 第一个菜单栏 -->
+    <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+            <!-- <div class="panel panel-default"> -->
+            <div class="panel-heading" role="tab" id="heading1">
+                <a class="collapsed" data-toggle="collapse"  href="#collapse1"  style="text-decoration:none;">
+                  <img class="one" src="./img/雕琢 (1).png" alt="">
+                </a>
+            </div>
+
+            <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+              <div class="panel-body">
+                <img src="./img/雕琢 (2).png" alt="">
+              </div>
+            </div>          
+    </div>
+
+
+    <!-- 第二个菜单栏 -->
+       <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+            <div class="panel-heading" role="tab" id="heading2">
+                <a class="collapsed" data-toggle="collapse"  href="#collapse2"  style="text-decoration:none;">
+                  <img class="one" src="./img/秘宝 (2).png" alt="">
+                </a>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+              <div class="panel-body">
+                <img src="./img/秘宝 (1).png" alt="">
+              </div>
+            </div>          
+    </div>
+
+    <!-- 第三个菜单栏 -->
+       <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
+            <div class="panel-heading" role="tab" id="heading3">
+                <a class="collapsed" data-toggle="collapse"  href="#collapse3"  style="text-decoration:none;">
+                  <img class="one" src="./img/片剂深研.png" alt="">
+                </a>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+              <div class="panel-body">
+                <img src="./img/片剂深研2.png" alt="">
+              </div>
+            </div>          
+    </div>
+
+
+    <!-- 第四个菜单栏 -->
+       <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
+            <div class="panel-heading" role="tab" id="heading4">
+                <a class="collapsed" data-toggle="collapse"  href="#collapse4"  style="text-decoration:none;">
+                  <img class="one" src="./img/溢神 (1).png" alt="">
+                </a>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+              <div class="panel-body">
+                <img src="./img/溢神 (2).png" alt="">
+              </div>
+            </div>          
+    </div>
+
+
+
+
+
+
+    </div>
+
+
+    <script src="./js/jquery-2.2.4.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+
+
+
+
+
+    <!-- 模态框底部弹出效果 -->
+    <!--点击显示模态框按钮-->
+<!-- <input type="submit" id="btnshow" value="导航栏" style="position: fixed; bottom: 33px;"> -->
+ <a href="#" id="btnshow" style="position: fixed; bottom: 33px; "><img src="./img/更多展示页白.png" alt=""></a>
+ <!--模态框内容模块-->
+ <div id="showModal" style="height:600px;width: 100%; position: fixed; left: 0; bottom: 0;display: none; background-color: #fff; z-index: 200;">
+  <div class="nei">
+    <a href="./YuanShen_0202.html"><img src="./img/全新大世界区域 (4).png" alt=""></a>
+    <a href="./YuanShen_0203.html"><img src="./img/全新机制.png" alt=""></a>
+    <a href="./YuanShen_0204.html"><img src="./img/更多版本活动.png" alt=""></a>
+    <a href="./YuanShen_0201.html" target="_blank"><img src="./img/原神.png" alt=""></a>
+    <a href="./YuanShen_0206.html"><img src="./img/角色情报.png" alt=""></a>
+    <a><img src="./img/全新怪物.png" alt=""></a>
+    <a href="./YuanShen_0205.html"><img src="./img/游戏特色.webp" alt=""></a>
+</div>      
+ </div>
+  
+ <!--遮罩层-->
+ <div id="modalOuter" style="opacity: 0.5; position: fixed;top: 0; left: 0;width: 100vw; height: 100vh; z-index: 100; background-color: #000; display: none;"></div>
+  
+ </body>
+  
+  
+ <!--引入你本地的juqery.js文件-->
+ <!-- <script src="./js/jquery-2.2.4.js"></script> -->
+ <script>
+  
+     //弹出底部模态框
+     $("#btnshow").click(function () {
+         $("#showModal").animate({
+             height: "show",
+         }, 700 );
+         $("#modalOuter").show();
+     });
+  
+     //隐藏底部模态框
+     $("#modalOuter").click(function () {
+         $("#showModal").animate({
+             height: "hide",
+         }, 700 );
+         $(this).hide();
+     });
+  
+ </script>
+
+
+
+
+
+
+</body>
+</html>

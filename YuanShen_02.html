@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神.主界面</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+
+    <style>
+         body{
+            overflow-x: hidden; 
+        }
+        .big {
+            position: absolute;
+            height: 451px;
+        }
+
+        .hei {
+            background-color: rgb(0, 0, 0);
+            filter: blur(60px);
+            width: 100%;
+            height: 130px;
+            position: relative;
+            top: -76px;
+        }
+        .second_photo{
+            position: relative;
+            z-index: 1;
+        }
+        /* .biao {
+            position: relative;
+            top: -172px;
+            right: -200px;
+             z-index: 0; 
+        } */
+        .fist_outside_div{
+            position: relative;
+           /* background-color: rgb(49, 177, 30); */
+           background: linear-gradient( rgb(0, 0, 0),rgb(255, 255, 255));
+           /* background-image: url(./img/背景\ \(1\).jpg); */
+           width: 100%;
+           height: 1200px;
+           z-index: 1;
+           /* 忽略背景的 */
+        }
+        .nei{
+            width: 900px;
+            height: 2300px;
+            margin: auto 0;
+            background-color: #fff;
+            position: relative;
+            left: 190px;
+            bottom: 60px;
+        }
+        .neiyou{
+            position: relative;
+            bottom: 2360px;
+            left: 1170px;
+        }
+        .photo{
+            width: 300px;
+            height: 1300px;
+        }
+        .container{
+            position:relative;
+            z-index: 99;
+        }
+        /* .modal-content{
+            position: relative;
+            z-index: 99;
+        } */
+        .modal-dialog{
+            position: relative;
+            z-index: 999;
+        }
+        .qian{
+            position: relative;
+            bottom: 73px;
+        }
+        .music{
+          position: relative;
+          bottom: 800px;
+        }
+
+
+
+
+
+
+        
+    .totop {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      right: 50px;
+      width: 60px;
+      height: 30px;
+      background-color: rgb(135, 235, 198);
+      font-size: 13px;
+      text-align: center;
+      line-height: 30px;
+    }
+    .totop:hover {
+      cursor: pointer;
+      color: #fff;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 第一个界面 -->
+    <div class="fist_outside_div">
+
+        <!-- 顶部下拉菜单栏 -->
+        <nav class="navbar  navbar-inverse" style="margin-bottom: 1px;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">游戏原神</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a target="_blank" href="https://ys.mihoyo.com/main/">原神官网</a></li>
+                        <li><a target="_blank" href="https://www.mihoyo.com/">米哈游</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">更多主线剧情<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">序章.捕风的异乡人</a></li>
+                                <li><a href="#">第一章.浮世浮生千岩间</a></li>
+                                <li><a href="#">第二章.振袖秋风问红叶</a></li>
+                                <li><a href="#">第三章.千朵玫瑰带来的黎明</a></li>
+                                <li><a href="#">更多章节</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" data-toggle="modal" data-target="#exampleModal">反馈问题</a></li>  
+                        <!-- <li><a href="#">反馈问题</a></li> -->
+                        <li><a href="./YuanShen_0201.html" target="_blank">首页</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索一下</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 问题反馈弹窗 -->
+
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button> -->
+<!-- 模态框 不能放在div里面，需要放在body里面-->
+         <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">欢迎您给我们反馈问题</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="control-label">您的联系方式</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">需要反馈的信息：</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">发送给我们</button>
+              </div>
+            </div>
+          </div>
+        </div>  
+    -->
+
+        <div class="big">
+            <!-- 柯莱GIF -->
+
+            <div class="second_photo">
+                <img src="./img/yuansheng_MeiGui.gif" alt="" style="width: 1707px; height: 360px;">
+            </div>
+
+
+            <!-- 黑色模糊边框 -->
+            <div class="hei"></div>
+
+            <!-- a标签跳转按钮 -->
+            <!-- <div class="biao">
+               
+                <a href="./YuanShen_0202.html" target="_blank"><img src="./img/全新大世界区域 (4).png" alt=""></a>
+                <a href="./YuanShen_0203.html" target="_blank"><img src="./img/全新机制.png" alt=""></a>
+                <a href="./YuanShen_0204.html" target="_blank"><img src="./img/更多版本活动.png" alt=""></a>
+                <a href="./YuanShen_0201.html" target="_blank"><img src="./img/原神.png" alt=""></a>
+                <a href="./YuanShen_0205.html" target="_blank"><img src="./img/游戏特色.webp" alt=""></a>
+                <a href="./YuanShen_0206.html" target="_blank"><img src="./img/角色情报.png" alt=""></a>
+                <a href="./YuanShen_0201.html" target="_blank"><img src="./img/全新怪物.png" alt=""></a>
+            </div> -->
+
+
+            <div class="nei">
+                <div class="qian">
+                    <!-- <a href=""><button type="button" style="border-style: none;"  data-toggle="tooltip" data-placement="left" title="游戏详情"><img src="./img/标签（0）.png" alt=""></button></a> -->
+
+                <a href="#yuan"><img src="./img/标签（0）.png" alt=""> <img src="./img/标签（8）.png" alt=""></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <a href="#gong"><img src="./img/标签 (1).png" alt=""></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#shi"><img src="./img/标签 (2).png" alt=""></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#ping"><img src="./img/标签 (3).png" alt=""></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#wen"><img src="./img/标签 (4).png" alt=""></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href=""><img src="./img/标签博（5）.png" alt=""></a>
+            </div>
+
+
+
+            <!-- a标签跳转按钮 -->
+            <div class="biao">
+                <a href="./YuanShen_0201.html" target="_blank"><img src="./img/原神.png" alt=""></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="./YuanShen_0202.html" target="_blank"><img src="./img/全新大世界区域 (4).png" alt=""></a>
+                <a href="./YuanShen_0203.html" target="_blank"><img src="./img/全新机制.png" alt=""></a> 
+                <a href="./YuanShen_0205.html" target="_blank"><img src="./img/游戏特色.webp" alt=""></a>
+                <a href="./YuanShen_0204.html" target="_blank"><img src="./img/更多版本活动.png" alt=""></a>
+                <a href="./YuanShen_0206.html" target="_blank"><img src="./img/角色情报.png" alt=""></a>
+                <a><img src="./img/全新怪物.png" alt=""></a>
+            </div>
+
+
+
+
+            <div>
+                <img id="gong" style="width: 860px;" src="./img/攻略.png" alt="">
+            </div>
+            <div>
+                <img id="shi" style="width: 860px;" src="./img/视频贴图.png" alt="">
+            </div>
+            <div>
+                <img id="ping" style="width: 860px;" src="./img/评论.png" alt="">
+            </div>
+            <div>
+                <img id="wen" style="width: 860px;" src="./img/问答页.png" alt="">
+            </div> 
+
+            </div>
+            <div class="neiyou">
+                <!-- <img class="photo" src="./img/百度原神右黄.png" alt=""> -->
+                <img id="yuan" src="./img/右黄.png" alt="">
+                <div class="music">
+                  <audio src="./MP3/原神孟德.mp3" controls="" autoplay="" loop=""></audio>
+                </div>
+            </div>
+
+           </div>
+       
+
+
+
+
+           
+          <div class="totop">
+            返回顶部
+          </div>
+        <script>
+            let totop = document.querySelector('.totop')
+    // 页面滚动窗口监听事件
+    window.onscroll = function() {
+      // 获取浏览器卷去的高度
+      let high = document.documentElement.scrollTop || document.body.scrollTop
+      if (high >= 1200) {
+        totop.style.display = 'block'
+      } else {
+        totop.style.display = 'none'
+      }
+    }
+    // 点击返回顶部，可以加动画使其慢慢回到顶部
+    totop.addEventListener('click',() => {
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
+    })
+
+        </script>
+        </div>
+
+
+
+
+         <!-- 问题反馈弹窗 -->
+
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button> -->
+<!-- 模态框 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="exampleModalLabel">欢迎您给我们反馈问题</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="control-label">您的联系方式</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="control-label">需要反馈的信息：</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary">发送给我们</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+        <script src="./js/jquery-2.2.4.js"></script>
+        <script src="./js/bootstrap.js"></script>
+</body>
+</html>
